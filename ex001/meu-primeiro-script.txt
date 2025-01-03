@@ -1,0 +1,11 @@
+meu-primeiro-script
+
+para criarmos um script de alert basta apenas criar um:
+window.alert('').
+
+obs: não precisamos escrever window, podemos colocar apenas o alert. 
+também não precisamos utilizar ; no final dos scripts.
+
+para criarmos uma janela de confirmação, basta criarmos um window.confirm
+
+para criarmos um prompt para o cliente, basta utilizar window.prompt
