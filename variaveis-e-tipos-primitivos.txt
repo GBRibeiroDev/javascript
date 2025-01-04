@@ -1,0 +1,73 @@
+variaveis-e-tipos-primitivos
+
+no javascript um sinal de igua "=" sempre se lê como "recebe" e não como igual. 
+
+para atribuirmos os valores nas variáveis de JS, basta colocarmos da seguinte maneira:
+
+var / let / const <- uso qualquer uma das 3 para declarar uma variavel
+
+let a1 = 5
+let a2 = 8.5
+let a3 = 4
+
+com isso eu defini o valor de cada variavel, sendo assim, a1 ta valendo 5, a2 8.5 e a3 valendo 4!
+
+tambem existem variaveis de tamanhos diferentes para caber dados de tamanhos diferentes.
+
+e essas variaveis maiores, normalmente são usadas para caber strings. vou criar como exemplo s1, s2 e s3. 
+
+let s1 = "JavaScript"
+let s2 = 'Curso em Video'
+let s3 = 'guanabara'
+
+e perceba que as 3 strings fazem uso de aspas. Dentro do JS nós podemos usar 3 tipos de aspas:
+aspas simples
+aspas duplas 
+crase
+
+tem diferença do uso dentro do JavaScript. mais para frente iremos aprender quando usar cada uma, mas existe diferença entre o uso delas.
+
+
+o nome de cada variavel, nós chamamos de identificadores. 
+esses nomes de indicadores tem algumas regras:
+
+-Podem começar com letra, $ ou _
+-Não podem começar com numeros 
+-É possível usar letras ou números
+-Não podem conter espaços (quando formos utilizar espaço, optamos por utilizar o -. exemplo: let media-querie)
+-É possivel usar acentos e símbolos
+-Não podem ser palavras reservadas (palavras reservadas seriam palavras que são comandos dentro do proprio js. eu por exemplo não consigo criar uma variavel chamada var,function...)
+
+para iniciarmos o terminal dentro do vscode basta criarmos um terminal e escrevermos "node" dentro dele. 
+depois que acabarmos de usar o terminal, basta escrever .exit e exit ou simplesmente ir na lixeira que fica no lado direito e fechar o terminal.
+
+para limpar a tela do terminal, basta utilizarmos o atalho ctrl + L 
+
+Dicas para criarmos nomes de variáveis:
+-Maiúsculas e minúsculas fazem a diferença
+-Tente escolher nomes coerentes para as variáveis. (let salario, let idade, let sexo...) 
+-Evite se tornar um 'programador alfabeto' ou um 'programador contador' (são programadores que usam com nome de variações apenas n1, n2, n3)
+
+e dentro das variáveis normalmente vamos guardar 3 tipos de dados (também chamados de tipos primitivos primordiais):
+number: (exemplos: 5, 18, -12, 0.5, -15.9, 3.14, 8.0)
+string: (Exemplos: "Google", 'JavaScript', `maria` vale lembrar que números também podem ser strings, exemplo de cpf, numero de telefone e etc)
+boolean: true e false (são chamados também de valor booleano)
+
+esses 3 acima são chamados de data types. dentro do js existem varios data types e esses são só alguns deles. 
+
+e dentro desses data types tem valores muito importantes:
+number: infinity e NaN
+NaN -> Not a Number
+
+e tambem temos outros data types como:
+null
+undefined
+object -> array
+function
+
+e para identificarmos os data types podemos utilizar o typeof dentro do node
+para isso, basta definirmos uma variavel e perguntar o typeof dela.
+exemplo:
+let n = 200
+typeof n
+resultado: number
