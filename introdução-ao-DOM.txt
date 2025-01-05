@@ -1,0 +1,58 @@
+introdução-ao-DOM
+
+DOM é a abreviação de Document Object Model
+basicamente é um conjunto de objetos dentro do meu navegador que vai dar acesso aos componentes internos do meu site. 
+
+Para mexermos com DOM é muito importante conhecer a Arvore do DOM que funciona basicamente como a hierarquia para chamar os comandos.
+
+Árvore DOM:
+window (tudo dentro do JS está dentro de uma janela chamada window (q quer dizer janela)) 
+dentro do window temos vários objetos, mas vou usar os 3 seguintes como exemplo:
+location / document / history
+
+location: ele diz qual é a localização atual do meu site que diz na url qual a pagina atual, a pagina anterior e etc.
+document: que é o documento atual. (esse nós usamos muito.)
+history: ele guarda de onde vc veio, para onde você vai e etc.
+
+dentro do document nós temos o -> html <- e dentro do html temos o head e body. já dentro do head temos o meta / title.
+dentro do body, no caso desse exercício que estamos fazendo no atual momento, temos h1, 2p e div. dentro de um dos parágrafos eu tenho um Strong e assim vai indo.
+window
+location / document / history
+         / html    /
+     | head / body /
+      h1 / p / p / div
+            / Strong/
+
+tudo isso que faz parte da arvore DOM é considerado elemento.
+e agora vamos aprender a selecionar esses elementos dentro do DOM. E para isso, temos alguns métodos que são eles:
+
+SELECIONANDO:
+
+por Marca -> getElementsByTagName() obs: para pegarmos alguma tag especifica, precisamos abrir [] e dentro dela colocar em forma de numero qual eu quero pegar. lembrando que o contador começa como 0 sendo o primeiro elemento. Nesse caso eu tinha dois parágrafos e queria selecionar apenas o primeiro deles. então eu coloquei da seguinte maneira:
+window.document.getElementsByTagName('p')[0]
+e para mostrar que o exemplo funcionou. eu criei um document.write(p1.innerText) innerText é o texto que ta escrito dentro do elemento selecionado.
+
+OBS: Esses colchetes [] são utilizados principalmente quando estamos selecionando algo que esteja em plural como foi o caso do get.ElementsByTagName
+no exemplo abaixo eu selecionei o primeiro paragrafo do meu body e troquei a cor e o background dele:
+        var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = '#449999'
+        p1.style.backgroundColor = '#fff'
+
+já no exemplo a seguir, eu botei o body dentro de uma variável e mudei o background dele:
+        let corpo = document.body
+        corpo.style.background = '#262626'
+
+obs: o innerHTML pega o texto com as tags, tudo exatamente como foi escrito no código. Já o innerText pega somente o texto, sem mostrar as tags que foram utilizadas.
+
+por ID -> getElementById() 
+
+
+por Nome -> getElementsByName() 
+
+por Classe -> getElementsByClassName()
+
+por Seletor -> querySelector() / querySelectorAll()
+
+OBS: O query selector nós utilizamos como se fosse um css. gostei bastante e abaixo vou mostrar o exemplo:
+        let d = window.document.querySelector('div#msg')
+        d.style.background = 'red'
