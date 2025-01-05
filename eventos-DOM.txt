@@ -1,0 +1,72 @@
+eventos-DOM
+
+evento basicamente é tudo que pode acontecer. nesse caso, criamos uma div para exemplificar que evento é tudo que pode acontecer de interação com a nossa div
+alguns eventos comuns de acontecer é o mouseenter que é quando o mouse entra na div e o mousemove que é quando o mouse se move dentro da div.
+quando clicamos e seguramos temos o evento do mousedown e quando eu soltar esse click, dispara o mouseup.
+também existe o evento de clicar normal, que se chama apenas click. e quando sairmos da div acontece o evento de mouseout
+
+
+os eventos podem ser configurados dentro do javascript ou dentro do html, nós podemos escolher.
+
+configurando evento dentro do HTML:
+
+vamos na div ou no elemento que desejamos colocar um evento e colocamos dentro da tag o evento que queremos disparar. exemplo: 
+
+<div id="area" onclick="clicar()">
+
+feito isso é hora de ir para o script configurar esse evento:
+
+
+    <script>
+        function clicar() {
+
+        }
+    </script>
+
+e no exemplo a seguir eu vou alterar o texto que está dentro da div com o evento de click. para isso, basta criar uma variável que va recebar nossa div e mudar o texto da seguinte forma:
+
+        function clicar() {
+            let a = document.getElementById('area')
+            a.innerText = 'Clicou'
+        }
+
+
+
+resumo do seguinte código:
+
+    <div id="area" onclick="clicar()">
+        Interaja...
+    </div>
+
+    <script>
+        function clicar() {
+            let a = document.getElementById('area')
+            a.innerText = 'Clicou'
+        }
+    </script>
+
+quando eu clicar na minha div, a function vai pegar o texto dela e trocar o texto de interaja para clicou. 
+
+agora vou criar um evento de mouseenter.
+
+e para não ter que criar outra variável a e pegar a div com ela novamente, podemos apenas tirar essa variável que pegou a div da primeira function e colocar ela logo no inicio do script (fora de qualquer function) sendo assim, qualquer function que formos usar, já vai ter a variável a com a div selecionada.
+
+OBS: Essa não é a melhor maneira de fazer isso por conta do uso da memoria do cliente, mas por enquanto é a maneira que vou continuar utilizando, até estudar sobre o js de forma mais avançada. 
+
+
+também podemos disparar os eventos dentro do JS para não deixarmos o html muito poluído.
+
+disparando os eventos com o JavaScript:
+
+para isso precisamos adicionar um addEventListener que vai ficar prestando atenção caso o evento aconteça.
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', saiu)
+
+esses não precisam adicionar o parênteses depois do nome que colocarmos na ação.
+
+observação: quando formos definir os eventos dentro do JS, é muito importante colocar em qual variável queremos que os eventos ocorram.
+
+
+normalmente no JS quando da algum erro no script, ele não vai te falar o que está errado, o código apenas vai parar de funcionar por completo. então para descobrirmos, é necessário ir dentro do dev tools do google e procurar o console para identificarmos o erro. 

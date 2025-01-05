@@ -1,0 +1,13 @@
+funcao-no-js
+
+função é um conjunto de códigos que vão ser executados só quando o evento acontecer.
+
+para criar essa função nós utilizamos um bloco e dentro desse bloco nós colocamos tudo que vai acontecer caso o evento desejado ocorra.
+
+para criar uma function não basta apenas criar um function { } também precisamos dar um nome para essa função para podermos identificar ela. 
+
+exemplo:
+function ação() { 
+}
+
+e opcionalmente também podemos colocar dentro do parênteses do nome da nossa function, alguns parâmetros.

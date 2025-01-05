@@ -1,0 +1,14 @@
+lista-de-eventos-DOM
+
+alguns exemplos de eventos DOM que vimos nessa aula:
+
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+
+site para descobrirmos mais DOM events:
+https://developer.mozilla.org/en-US/docs/Web/Events
+
