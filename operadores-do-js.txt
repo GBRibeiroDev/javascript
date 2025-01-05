@@ -1,0 +1,76 @@
+operadores-do-js
+
+no js existe vários operadores, mas vamos ver apenas os:
+aritméticos
+atribuição
+relacionais
+lógicos
+ternário
+
+
+-----------------
+aritméticos:
++: soma 2+2:4
+-: subtração 5-2:3
+*: multiplicação 5*2:10
+/: divisão 5/2:2.5
+%: resto de divisão 5%2:1 (5/2)
+**: elevado ao quadrado 5**2:25
+
+obs: é necessário tomar cuidado com a ordem de precedência dos cálculos. 
+um calculo como 5 + 3 / 2 é feito o 3 / 2 primeiro e o resultado desse calculo é somado com 5, tendo o resultado 6.5
+
+para mudar essa ordem de precedência e dizer que queremos colocar o 5+3 para ser executado primeiro, basta utilizarmos o parênteses. ficando da mesma maneira que o exemplo:
+(5+3) / 2 = 8.
+
+Ordem de Precedência:
+()
+**
+* / %
++ -
+
+obs: se mais de um desses operadores estiverem na expressão, o calculo vai ser feito da esquerda para direita normalmente. 
+
+para fazermos a atribuição dos valores dentro de variáveis também é bem simples:
+
+Atribuição: 
+ Simples: 
+Exemplo:
+Var a = 5+3 : 8
+Var b = a% 5 : 3
+Var c = 5* b ** 2 : 45
+Var d = 10 – a / 2 : 6
+Var e = 6 * 2 / d : 2
+Var f = b % e + 4 / e : 3
+
+
+dentro das variáveis também podemos fazer as auto-atribuições:
+Auto atribuição:
+Var n = 3
+ n = n+4:7 
+n = n-5:2
+n = n*4:8
+n = n/2:4
+n = n**2:16
+n = n%5:1
+
+e também podemos simplificar essas auto atribuições da seguinte maneira: 
+Simplificando:
+n+= 4
+n-= 5
+n*= 4
+n/= 2
+n**= 2
+n%=5
+
+obs: esse += só da para ser utilizado se a mesma variável receber ela + 4. ou seja, um n = n + 4 vira um n+=4
+
+também temos os operadores de 
+
+---------------
+incremento
+---------------
+
+var x = 5
+x = x+1:6 ou x+=1:6 podemos simplificar fazendo x++ <- significa que vai ser x = x + 1
+x = x-1:4 ou x-+1:4 podemos simplificar fazendo x--

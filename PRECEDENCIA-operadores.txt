@@ -1,0 +1,6 @@
+PRECEDENCIA:
+() ** /... <- ARITMETICOS (sempre respeitando a ordem de precedência entre eles.) 
+> < >=... <- RELACIONAIS (esse não tem ordem de precedência entre eles. o que aparecer primeiro vai ser feito primeiro)
+!
+&&
+||

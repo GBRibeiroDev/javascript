@@ -1,0 +1,82 @@
+operadores-parte2
+
+relacionais:
+> : maior
+< : menor
+>= : maior ou igual
+<= : menor ou igual
+== : igual
+!= : diferente
+
+para toda expressão que tenha um operador relacional, o resultado vai ser um booleano (true / false) 
+exemplos:
+5>2: true
+7<4: false
+8>=8: true
+9<=7: false
+5==5: true
+4!=4: false
+
+identidade:
+== : igual independente do typeof
+=== : idêntico  (tem que ser o mesmo numero e o mesmo typeoff)
+!== : desigual restrito (valor é o mesmo, mas os tipos são diferentes.)
+
+
+5==5:true
+5=='5':true 
+
+obs: isso acontece pq o js apenas com o operador de identidade == não está verificando se é string ou numero, ele está verificando se é igual. para sabermos se é exatamente igual, iremos usar o operador de identidade ===. esse operador diz se é o mesmo numero e o mesmo data type(typeof) ou seja, se é numero ou string.
+
+
+Lógicos:
+! negação
+&& conjunção
+|| disjunção
+
+exemplo de uso desses:
+o ! é considerado um operado unário. depois da ! ou eu boto true ou eu boto false. isso acontece pq ele tem somente 1 operando.
+
+&& nesse eu tenho dois valores binários, um de cada lado.
+exemplo:
+true && true -> true
+true && false -> false
+false && true -> false
+false && false -> false
+
+isso significa que só vai ser true se as duas forem true.
+
+||
+
+true || true -> true
+true || false -> true
+false || true -> true
+false || false -> false
+
+exercício explicado:
+let a = 5
+let b = 8
+
+a > b && b%2 ==0
+
+
+-----------------------------
+PRECEDENCIA:
+() ** /... <- ARITMETICOS (sempre respeitando a ordem de precedência entre eles.) 
+> < >=... <- RELACIONAIS (esse não tem ordem de precedência entre eles. o que aparecer primeiro vai ser feito primeiro)
+!
+&&
+||
+
+
+Operadores ternários:
+? :
+
+significa:
+teste ? true : false
+
+se o teste for verdadeiro, acontece a segunda opção. se for falso acontece a terceira.
+exemplo:
+media >= 7 ? "Aprovado" : "Reprovado"
+
+

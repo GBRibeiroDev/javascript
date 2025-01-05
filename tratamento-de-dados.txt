@@ -1,0 +1,84 @@
+tratamento-de-dados
+
+nessa aula vamos trabalhar com manipulação de dados. 
+nesse caso, vamos perguntar o nome do cliente através do prompt do JS e pegar a resposta desse prompt e jogar dentro de uma variável.
+para fazer isso, vamos fazer da seguinte maneira:
+
+let nome = window.prompt('Qual é seu nome?')
+
+feito isso, podemos fazer com que esse nome apareça em um alert. e para fazer isso precisamos fazer uma concatenação que é adicionar o sinal de + e o nome da variável fora das aspas da string, ficando da seguinte maneira:
+
+alert('É um grande prazer em te conhecer, ' + nome)
+
+para continuar escrevendo depois disso, basta fazer outra concatenação, conforme foi feito no exemplo abaixo:
+
+alert('É um grande prazer em te conhecer, ' + nome + '!')
+
+agora em um outro exemplo, vamos ver que para fazer a soma não adianta colocarmos o sinal de + pq ele serve para adição e para concatenação dentro do js. então se colocarmos uma variável com a soma de n1 + n2, ele vai juntar os valores das duas variáveis ao invés de somar ambos. 
+
+isso acontece pq o que foi digitado no prompt veio como string. e quando juntamos duas strings dentro do js ele faz a concatenação.
+
+para fazermos a soma, precisamos transformar os dois valores que foram colocados dentro do prompt em Numbers.
+
+muita das vezes precisamos fazer essas transformações de tipos e para isso temos algumas opções. 
+
+para transformarmos string > number temos algumas maneiras:
+
+Number.parseInt(n) (também podemos escrever somente parseInt(n) ) esse método serve para fazer a conversão de um numero em string para um numero inteiro.
+Number.parseFloat(n) esse serve para transformar um numero inteiro (seria números de que usam virgula como 3.5 por exemplo.)
+
+feito isso, eu vou estar dizendo que a minha variável vai estar pegando a string do prompt e transformando em numero, ficando da seguinte maneira:
+
+        let n1 = Number.parseInt(prompt('Digite um número: '))
+        let n2 = Number.parseInt(prompt('Digite outro número: '))
+
+mas para podermos fazer essa conversão de maneira ainda mais fácil, podemos apenas adicionar o Number(n) e deixar que o próprio JS identifique se é um numero real ou um numero inteiro.
+ficando da seguinte maneira:
+let n1 = Number(prompt('Digite um número: '))
+
+assim como nós manipulamos um number para virar string, também podemos fazer o oposto.
+
+Número > String
+
+para essa conversão, vamos utilizar o String(n) ou n.toString()
+exemplo: 
+alert('A soma dos valores é ' + String(s))
+
+
+obs: esse (n) é sempre a variável que está sendo trabalhada. 
+
+
+Formatando Strings:
+
+para não precisarmos ficar fazendo concatenação pois em muitos casos podem deixar nosso código longo, nós podemos utilizar pleace holders. que seria ${variavel}
+
+OBS: Só conseguimos usar esse método quando utilizamos crase ao invés de aspas simples ou aspas dupla.
+`O aluno ${nome} com a idade ${idade} tirou a nota ${nota}`
+
+também podemos usar outras formatações de string, exemplo:
+let s 'JavaScript'
+s.length <-- esse length serve para me dizer quantos caracteres a string tem
+s.toUpperCase() <-- essa faz com que os caracteres da string fiquem todos em letras maiúsculas.
+s.toLowerCase() <-- essa fica tudo minúscula.
+
+exemplo de uso desses comando:
+document.write(`Seu nome tem ${nome.length} letras.`)
+
+outro exemplo: 
+
+ocument.write(`Seu nome em maiúsculas é ${nome.toLowerCase()}`)
+
+Formatando Números:
+
+para adicionarmos mais casas decimais aos números basta utilizar variável.toFixed() e numero de casas decimais dentro do parênteses. 
+exemplo:
+let n1 = 1545.5
+n1.toFixed(2)
+resultado: 1545.50
+
+caso a gente queira trocar o . por , podemos escrever da seguinte maneira:
+n1.toFixed(2).replace('.', ',')
+
+e para fazermos a localização de um numero como se fosse um salario por exemplo, usamos o seguinte código:
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL))
+
