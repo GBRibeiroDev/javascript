@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de País</title>
+</head>
+<body>
+    <p>Vivendo em: <input type="text" name="txtp" id="txtp"></p>
+    <input type="button" value="Verificar" id="btn">
+    <div id="res">
+
+    </div>
+    <script>
+        let btn = document.getElementById('btn')
+        btn.addEventListener('click', verificar)
+        let res = document.getElementById('res')
+
+        function verificar() {
+            let país = document.getElementById('txtp').value.trim().toLowerCase();
+            if (país == 'brasil') {
+            res.innerHTML = 'Você é Brasileiro!'        
+            } else {
+            res.innerHTML = 'Você não é Brasileiro!'
+            }
+        } 
+    </script>
+</body>
+</html>
