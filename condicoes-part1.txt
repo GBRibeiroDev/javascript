@@ -1,0 +1,34 @@
+condicoes-part1
+
+
+para trabalharmos com condições dentro do JS iremos utilizar a estrutura if.
+
+o if contem apenas 2 possibilidades, que no caso é true e false.
+
+então if significa "se" e else significa "se não" então para trabalharmos com condições só vamos ter duas possibilidades, e para representar elas iremos criar a seguinte estrutura:
+
+if (condição) {
+   -> true <- 
+
+} else { 
+   -> false <- }
+
+
+// Tipos de condição
+
+condição simples: 
+é quando ela só possui o if. ela só vai criar o bloco de true e não tem outra possibilidade. nesse caso, se a condição for true, acontece algo, se não, o fluxo do programa segue normalmente.
+
+if (condição) {
+
+}
+
+
+o outro tipo é o que contem dois caminhos, que seria o 
+if (condição) {
+
+} else { 
+
+}
+
+para escrevermos na tela dentro do JavaScript, vamos utilizar o console.log('')
