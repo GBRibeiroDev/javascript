@@ -1,0 +1,86 @@
+condicoes-part2
+
+condições aninhadas
+
+é bem simples, para fazer isso vamos pegar uma condição composta e colocar dentro dela fica da seguinte maneira:
+
+if (cond1) {
+ -> bloco 1 <- 
+} else { 
+      if (cond2) {
+	-> bloco 2 <- 
+} else {	
+	-> bloco3 <-
+}
+}
+
+exemplo de condição aninhada: 
+let idade = 15
+if (idade < 16) {
+    console.log('Não vota')
+} else if (idade < 18) {
+        console.log('Voto opcional')
+}
+
+para criarmos uma variável que pegue a hora exata que estamos utilizando o programa, vamos criar uma variável e colocar new Date(), feito isso vamos criar uma variável para as horas e colocar getHours(). lembrando que podemos pegar o dia, ano, mês e etc.
+exemplo:
+
+let agora = new Date()
+let hora = agora.getHours()
+
+
+
+condição múltipla
+
+essa é muito útil para valores fixos e ele é chamado de switch. esse switch contem uma switch (expressão) e para utilizar o switch é bem simples:
+switch (expressão) {
+
+case valor 1:
+
+
+case valor 2:
+
+
+
+case valor 3:
+
+
+default:
+
+}
+
+OBS: No switch eu preciso colocar um comando break dentro de cada switch, é obrigatório pq ele testa a expressão e quando ele achar a verdadeira, vai pausar nela e seguir o fluxo do programa normal
+
+uso do switch para me dizer o dia da semana em que o código está rodando: 
+switch (diaSem) {
+    case 0:
+        console.log('Domingo')
+        break
+    case 1: 
+        console.log('Segunda')
+        break
+    case 2: 
+        console.log('Terça')
+        break
+    case 3:
+        console.log('Quarta')
+        break
+    case 4:
+        console.log('Quinta')
+        break
+    case 5:
+        console.log('Sexta')
+        break
+    case 6: 
+        console.log('Sabado')
+        break
+    default:
+        console.log('[ERRO] Dia inválido')
+        break
+}
+
+
+obs: vale lembrar que pro JS começa a contar no domingo que é o dia 0.
+
+obs2: o switch funciona com números inteiros e com strings. 
+
