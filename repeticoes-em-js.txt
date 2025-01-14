@@ -1,0 +1,37 @@
+repeticoes-em-js
+
+repetições no js também podem ser chamados de laços.
+
+essas estruturas de repetições funcionam como a estrutura de condição (if). ele vai ficar fazendo o teste logico e enquanto for verdadeiro, ele vai executar o bloco até que seja falso e ele ai sim de continuidade na sequencia.
+
+para representar a estrutura de repetição no js, vamos utilizar a palavra while. ela significa "enquanto"
+
+while(condição) {
+
+}
+
+vou criar uma estrutura de repetição básica para me dizer tudo bem 5 vezes. 
+
+let c = 1
+while (c <= 6) {
+    console.log('Tudo bem?')
+    c++ // c = c + 1
+}
+
+essa estrutura é chamada de estrutura de repetição com teste lógico no inicio. 
+
+para fazermos umas estrutura onde primeiro ele vai fazer o bloco e depois o teste lógico, vamos utilizar o "do" que quer dizer "faça" ficando da seguinte maneira:
+
+do {
+
+} while (condição)
+
+se lê "faça esse bloco enquanto a condição for verdadeira" e a partir do momento que a estrutura for falsa, ele sai desse bloco de repetição e segue o rumo normalmente.
+
+let c = 1
+do {
+console.log(`Passo ${c}`)
+    c++ // c = c + 1
+} while (c <= 7)
+
+

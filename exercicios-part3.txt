@@ -1,0 +1,33 @@
+exercicios-part3
+
+para não permitir o usuário a marcar mais do que um radio, é importante que os rádios tenham o mesmo nome.
+
+obs: é importante ter o mesmo name, não o mesmo id. 
+
+exemplo:
+
+<input type="radio" name="radsex" id="mas" checked>
+<input type="radio" name="radsex" id="fem">
+
+para fazer com que o js veja se não teve um ano escolhido, basta colocar na condição do if o fano.value.length == 0
+exemplo:
+
+let fano = document.getElementById('txtano')
+if (fano.value.length == 0 || fano.value > ano)
+
+para saber qual foi o radio escolhido, basta colocar [0] ou [1]. o primeiro vai ser sempre o 0 e assim vai subindo.
+
+para selecionar dentro do js o radio que foi marcado, vamos fazer uma variável pegando o name do radio e colocar dentro da condição essa variável e colocar qual deles foi checkado, exemplo:
+
+let fsex = document.getElementsByName('radsex')
+if (fsex[0].checked)
+
+
+para criarmos uma imagem dentro do js podemos fazer da seguinte maneira:
+let img = document.createElement('img') e para dar um id para essa img criada no js, basta fazer um 
+
+e para adicionar imagem dentro dessa tag imagem criada pelo js, nós fazemos da seguinte maneira:
+img.setAttribute('src', 'imagens/hbebe.png')
+
+e para fazer essa imagem aparecer, precisamos ir lá em baixo e colocar res.appendChild(img)
+
