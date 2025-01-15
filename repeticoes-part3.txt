@@ -1,0 +1,10 @@
+repeticoes-part3
+
+vamos ver uma estrutura de repetição com uma variável de controle e ela é chamada de for 
+
+for (inicio; teste; incremento) {
+
+}
+
+essa estrutura vai ficar testando e incrementando no bloco até que o teste lógico seja falso, e ai ele segue o percurso normalmente. 
+
