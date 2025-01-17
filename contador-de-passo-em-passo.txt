@@ -1,0 +1,66 @@
+contador-de-passo-em-passo
+
+ if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length) 
+
+let.value.length significa que caso o input da variável for igual a 0, vai dar erro.
+
+for(let c = i; c <= f; c+= p) o contador vai começar no inicio e enquanto o contador for menor ou igual a f, o contador vai receber ele mesmo += p.
+
+
+para adicionar emoji no js nós vamos substituir o código U+1f603 por \u{1f603}.
+
+para buscar os emojis basta procurar full emoji list e o código e substituir o U+ por \u{código}
+
+essa contagem aqui só funciona se o valor de cima for menor do que o valor de baixo:
+        for(let c = i; c <= f; c += p) {
+            res.innerHTML += ` ${c} \u{1f449}`
+        }
+
+para resolver isso eu vou fazer vou criar um if e colocar if (i < f) 
+        if (i < f) {
+            for(let c = i; c <= f; c += p) {
+                res.innerHTML += ` ${c} \u{1f449}`
+            }
+            res.innerHTML += `\u{1f3c1}`
+        }
+
+
+let btn = document.getElementById('txtb')
+btn.addEventListener('click', contar)
+
+function contar() {
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
+    let res = document.getElementById('res')
+
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        res.innerHTML = 'Impossível contar!'
+        // alert('[ERRO] faltam dados!')
+    } else {
+        res.innerHTML = 'Contando: <br>'
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+        if (p <= 0) {
+            alert('Passo inválido! Considerando PASSO 1')
+            p = 1
+        }
+
+
+        if (i < f) {
+            // Contagem crescente
+            for(let c = i; c <= f; c += p) {
+                res.innerHTML += ` ${c} \u{1f449}`
+            }
+        } else {
+            // Contagem Regressiva 
+            for (let c = i; c >= f; c -= p) {
+                res.innerHTML += `${c} \u{1f449}`
+            }
+        }
+        res.innerHTML += `\u{1f3c1}`
+
+    }
+}
+
