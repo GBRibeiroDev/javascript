@@ -8,9 +8,24 @@
 <body>
     <p>Número: <input type="number" name="txtn" id="txtn"></p>
     <input type="button" value="Verificar" onclick="somar()">
+    <div id="res" >
+
+    </div>
 
     <script>
-        function somar()
+        function somar() {
+            let number = document.getElementById('txtn')
+            let n = Number(number.value)
+            let res = document.getElementById('res')
+            res.innerHTML = " "
+            if (number.value.length == 0) {
+                res.innerHTML = 'Digite um número válido'
+            } else {
+                for ( c = 1; c <= 10; c++) {
+                    res.innerHTML += `${n} x ${c} = ${n*c} <br>` 
+                }
+            }
+        }
     </script>
 </body>
 </html>
