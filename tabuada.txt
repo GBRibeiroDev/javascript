@@ -1,0 +1,9 @@
+tabuada
+
+para criar um elemento qualquer  que seja dentro de JS eu faço da seguinte maneira:
+
+let item = document.createElement('option')
+
+
+e para adicionar um elemento filho eu coloco appendChild(variável que eu quero que apareça):
+

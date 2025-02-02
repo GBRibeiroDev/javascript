@@ -1,0 +1,69 @@
+array-vetor
+
+também chamada de variável composta
+nada mais é do que uma variável que é capaz de armazenar vários valores em uma mesma estrutura.
+
+normalmente quando declaramos uma variável composta, precisamos dizer o índice que cada objeto vai ocupar.
+
+exemplo:
+
+var a = [5, 7, 4]
+
+é importante lembrar que o índice sempre começa em 0. então no meu caso o número 5 é o meu a0, meu numero 7 é meu a1 e meu 4 é meu a2
+
+arrays (no brasil é chamado de vetores) é uma variável com  vários espaços que são ocupados por elementos. 
+
+cada elemento é composto por seu valor e uma chave de identificação. 
+
+para acrescentarmos mais um valor dentro da nossa variável composta, basta colocar o nome da variável e dizer em qual índice eu quero adicionar o elemento.
+exemplo:
+
+let num = [5, 8, 4]
+num[3] = 6
+
+o código acima diz que a minha terceira vaga da variável composta vai receber o valor 6. (lembrando que começa a contagem de índices em 0
+
+caso eu não queria ficar contando quantos índices tem a minha variável composta, basta eu colocar um push e o numero desejado para poder ocupar o ultimo índice.
+
+exemplo:
+num.push(7) <- isso faz com que o valor 7 seja acrescentado no ultimo índice. 
+
+para descobrirmos qual o comprimento do nosso array, basta adicionar o length
+exemplo:
+num.length
+
+para adicionarmos todos os arrays em ordem crescente (quando forem números) basta fazer:
+num.sort()
+
+observação: é muito importante prestarmos atenção com a forma que escrevemos. se eu colocar um sort() em cima de um push, significa que primeiro ele vai ordenar em ordem crescente e só depois ele vai acrescentar o push.
+
+para mostrarmos os vetores vamos acrescentar uma estrutura de repetição que nesse caso vou utilizar a for.
+for( let pos = 0; pos<num.length; pos++) {
+    console.log(num[pos])
+}
+
+esse código diz que eu criei a variável pos e que enquanto pos for menor do que o comprimento da variável num, pos vai receber ela + 1
+e console.log(num[pos]) é justamente para mostrar os elementos dentro dos meus vetores
+
+e para simplificar o código acima, podemos utilizar uma estrutura que é feita justamente para deixarmos nosso código mais limpo se tratando de variáveis compostas
+e essa estrutra é a for in 
+
+para utilizar o for in a primeira coisa que eu vou colocar dentro do for é o meu índice e depois a minha variável. ficando da seguinte maneira:
+
+e vamos ler da seguinte maneira:
+Para cada posição dentro de valores.
+
+for = para
+in = dentro
+
+for (let pos in valores) {
+    console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
+}
+
+
+para buscarmos um valor dentro da variável composta vamos utilizar o indexOf(valor)
+exemplo:
+valores.indexOf(7)
+
+obs: caso eu coloque um valor que não exista dentro da variável composta, ele vai me retornar o número 1.
+
