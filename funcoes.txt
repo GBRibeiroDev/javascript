@@ -1,0 +1,60 @@
+funções
+
+toda função precisa ter uma chamada.
+
+nem toda função precisa ter um parâmetro.
+
+toda função tem um ação.
+
+nem toda função tem retornos. 
+
+funções são ações executadas assim que são chamadas ou em decorrência de algum evento.
+
+Uma função pode receber parâmetros e retornar um resultado. 
+
+os parâmetros são colocados dentro dos parênteses de uma função. 
+
+exemplo: function ação(parâmetro) {
+
+}
+
+ação(5) <- isso diz que eu estou chamando a minha função 
+
+então um função ela tem:
+
+parâmetro que fica dentro dos parênteses.
+chamada que pode ser tanto o ação(5) como nesse exemplo ou um evento que você coloca no elemento.
+ação que é o bloco que será executado.
+retorno que é o return que fica dentro da ação.
+
+
+eu posso ter mais de um return dentro de uma function. eu preciso apenas que um deles seja executado. 
+
+exemplo pratico de tudo isso:
+function soma(n1, n2) {
+    return n1 + n2
+}
+
+console.log(soma(2, 5))
+
+essa function está responsável por fazer as somas para gente. 
+
+obs: se nesse caso eu tivesse mandado apenas o parâmetro 2, o resultado seria NaN not a number. Pois somente a variável n1 teria sido definida, nesse caso precisamos definir as duas variáveis. 
+
+mas também eu posso já deixar os parâmetros pré definidos para evitar o erro de NaN. 
+Quando eu deixo os parâmetros pré definidos eles começam valendo 0 e se receber um parâmetro novo, ele é substituído. 
+para deixar pré definido basta fazer da seguinte maneira:
+function soma(n1=0, n2=0) {
+    return n1 + n2
+}
+
+
+no JS também podemos colocar uma function dentro de uma variável. 
+exemplo:
+
+let v = function(x) {
+    return x*2
+}
+
+console.log(v(10))   <- nesse caso eu mandei escrever a nossa function e defini um parâmetro para ela
+
